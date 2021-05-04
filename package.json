@@ -1,6 +1,6 @@
 {
 	"name": "pepegabot",
-	"version": "0.0.8",
+	"version": "0.0.9",
 	"description": "бот для сервера пепег",
 	"main": "index.js",
 	"scripts": {
@@ -13,7 +13,6 @@
 	"license": "ISC",
 	"dependencies": {
 		"aoi.js": "^1.0.6",
-		"dbd.express": "^1.0.1",
 		"dbd.js-utils": "^0.1.1",
 		"ffmpeg-static": "^4.3.0"
 	}
