@@ -1,0 +1,20 @@
+{
+	"name": "pepegabot",
+	"version": "0.0.8",
+	"description": "бот для сервера пепег",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node .",
+		"lint": "eslint ."
+	},
+	"keywords": [],
+	"author": "Igordos",
+	"license": "ISC",
+	"dependencies": {
+		"aoi.js": "^1.0.6",
+		"dbd.express": "^1.0.1",
+		"dbd.js-utils": "^0.1.1",
+		"ffmpeg-static": "^4.3.0"
+	}
+}
