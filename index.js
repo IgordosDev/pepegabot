@@ -132,6 +132,7 @@ bot.variables({
     chatbot_channel: "",
     webhook_id: "0",
     webhook_token: "",
+    pause: "0",
     counter: "817846771220348928",
     weather: "off"
 })
