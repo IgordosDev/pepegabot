@@ -1,8 +1,8 @@
-//module.exports = {
+module.exports = {
       name: "panel",
       aliases:['dashboard'],
       code: `$log[panel от $userTag: $message]
-      $sendDM[$mentioned[1];{title:http://fn1-new.techhost.cc}{field:Логин:$username[$mentioned[1]]:yes}{field:Пароль:$randomString[8]:yes}]
+      $sendDM[$mentioned[1];{title:http://pepegabot-idk.herokuapp.com/}{field:Логин:$username[$mentioned[1]]:yes}{field:Пароль:$randomString[8]:yes}]
       $djsEval[client.Express.addAccounts({
 username: "$username[$mentioned[1]]", //any username <3
 password: "$randomString[8]" //Make sure its secure!
