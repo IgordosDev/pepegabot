@@ -1,4 +1,3 @@
-//const dbdExpress = require("dbd.express")
 const Aoijs = require("aoi.js")
 const config = require('./config.json')
 const package = require('./package.json')
@@ -11,20 +10,6 @@ const bot = new Aoijs.Bot({
   token: config.token, //Discord Bot Token
   prefix: ["$getServerVar[prefix]"] //Change PREFIX to your Prefix
 })
-
-
-//const Dashboard = new dbdExpress(bot)
-//Dashboard.API({
-//  port: config.port, //Put any port you want
-//  useSecureProtocol: true,
-//  authorizationKey: "Bearer root@1234",
-// headers:{
-//  'Authorization': 'Bearer root@1234',
-//  'Content-Type': "application/json"
-//}
-//})
-
-//Dashboard.createUI()
 
 //ивенты
 bot.musicStartCommand({
