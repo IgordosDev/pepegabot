@@ -1,4 +1,4 @@
-//const dbdExpress = require("dbd.express")
+const dbdExpress = require("dbd.express")
 const Aoijs = require("aoi.js")
 const config = require('./config.json')
 const package = require('./package.json')
@@ -13,18 +13,18 @@ const bot = new Aoijs.Bot({
 })
 
 
-//const Dashboard = new dbdExpress(bot)
-//Dashboard.API({
-//  port: config.port, //Put any port you want
-//  useSecureProtocol: true,
-//  authorizationKey: "Bearer root@1234",
-// headers:{
-//  'Authorization': 'Bearer root@1234',
-//  'Content-Type': "application/json"
-//}
-//})
+const Dashboard = new dbdExpress(bot)
+Dashboard.API({
+  port: config.port, //Put any port you want
+  useSecureProtocol: true,
+  authorizationKey: "Bearer root@1234",
+ headers:{
+  'Authorization': 'Bearer root@1234',
+  'Content-Type': "application/json"
+}
+})
 
-//Dashboard.createUI()
+Dashboard.createUI()
 
 //ивенты
 bot.musicStartCommand({
@@ -33,7 +33,7 @@ bot.musicStartCommand({
  Сейчас играет "**$songInfo[title]**"`
 })
  
-bot.onMessage() // Allows Commands to Executed
+//bot.onMessage() // Allows Commands to Executed
 bot.loadCommands(`./commands/`) //Allows Commands executed by `commands` folder
 bot.command({
 name: "ping", 
@@ -143,7 +143,6 @@ $addField[Канал;<#$channelID>;yes] $footer[ID: $authorID] $addTimestamp`
 //переменные
 bot.variables({
     prefix: "p!",
-    pause: "0",
     chatbot: "off",
     chatbot_channel: "",
     webhook_id: "0",
