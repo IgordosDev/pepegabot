@@ -1,4 +1,4 @@
-module.exports = ({
+//module.exports = ({
 name: "role",
 aliases: ['create-role', 'createrole'],
 code: `$log[role от $userTag: $noMentionMessage]
