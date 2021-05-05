@@ -6,7 +6,7 @@ $sendWebhook[$getServerVar[webhook_id];$getServerVar[webhook_token];$jsonRequest
 $botTyping
 $onlyIf[$jsonRequest[https://api.affiliateplus.xyz/api/chatbot?message=$replaceText[$noMentionMessage; ;%20;-1]&botname=Sophia&ownername=Igordos&user=$replaceText[$username; ;%20;-1];message;]!=;]
 $onlyIf[$getServerVar[chatbot_channel]==$channelID;]
-$onlyIf[$message[1]!=$getServerVar[prefix]chatbot;]
+$onlyIf[$checkContains[$message[1];p!]==false;]
 $onlyIf[$getServerVar[chatbot]==on;]`,
 }, {
   name: 'chatbot',
