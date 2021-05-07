@@ -1,6 +1,5 @@
 const Aoijs = require("aoi.js")
 const config = require('./config.json')
-const package = require('./package.json')
 
 const bot = new Aoijs.Bot({
   sharding: false, //true or false 
