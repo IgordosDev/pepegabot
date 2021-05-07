@@ -120,9 +120,9 @@ bot.onRateLimit()
 
 bot.onTypingStart()
 bot.typingStartCommand({
-    channel: "753673183298846730",
+    channel: "$alwaysExecute",
     code: `$author[$userTag;$authorAvatar] $title[Печатает]
-$addField[Канал;<#$channelID>;yes] $footer[ID: $authorID] $addTimestamp`
+$addField[Канал;<#$channelID>;yes] $footer[ID: $authorID] $addTimestamp $useChannel[753673183298846730]`
 });
 
 //переменные
