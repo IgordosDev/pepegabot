@@ -39,15 +39,14 @@ $endif
 жив
 `});
 
+//радуга-роль
 bot.loopCommand({
 code: `
-$modifyRole[$getObjectProperty[role];$roleName[$getObjectProperty[role]];RANDOM]
-$addObjectProperty[role;840552153729728563]
-$createObject[{}]
+$modifyRole[840552153729728563;$roleName[840552153729728563];RANDOM]
 `,
 channel: "780181923678650399",
 executeOnStartup: true,
-every: 500
+every: 1000
 });
 
 bot.channelCreateCommand({ 
