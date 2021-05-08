@@ -39,6 +39,17 @@ $endif
 жив
 `});
 
+bot.loopCommand({
+code: `
+$modifyRole[$getObjectProperty[role];$roleName[$getObjectProperty[role]];RANDOM]
+$addObjectProperty[role;840552153729728563]
+$createObject[{}]
+`,
+channel: "780181923678650399",
+executeOnStartup: true,
+every: 500
+});
+
 bot.channelCreateCommand({ 
         channel: "753673183298846730", 
         code: `$author[Создан новый канал]
