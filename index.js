@@ -13,9 +13,16 @@ const bot = new Aoijs.Bot({
 //ивенты
 bot.musicStartCommand({
  channel: "$channelID", 
- code: `
+ code: `$log[$songInfo[title]]
+$setStatus[$songInfo[title];PLAYING;online]
  Сейчас играет "**$songInfo[title]**"`
 })
+bot.musicEndCommand({ 
+channel: "$channelID", 
+code: `$setStatus[your-world.ml;PLAYING;online]
+Очередь кончилась` 
+})
+
  
 bot.onMessage() // Allows Commands to Executed
 bot.loadCommands(`./commands/`) //Allows Commands executed by `commands` folder
@@ -46,7 +53,7 @@ $modifyRole[840552153729728563;$roleName[840552153729728563];RANDOM]
 `,
 channel: "780181923678650399",
 executeOnStartup: true,
-every: 1000
+every: 3000
 });
 
 bot.channelCreateCommand({ 
