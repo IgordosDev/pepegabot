@@ -14,14 +14,14 @@ const bot = new Aoijs.Bot({
 bot.musicStartCommand({
  channel: "$channelID", 
  code: `$log[$songInfo[title]]
-$setStatus[$songInfo[title];PLAYING;online]
- Сейчас играет "**$songInfo[title]**"`
-})
+$setStatus[$songInfo[title];LISTENING;online]
+Сейчас играет "**$songInfo[title]**"
+`})
 bot.musicEndCommand({ 
 channel: "$channelID", 
 code: `$setStatus[your-world.ml;PLAYING;online]
-Очередь кончилась` 
-})
+Очередь кончилась
+`})
 
  
 bot.onMessage() // Allows Commands to Executed
@@ -45,16 +45,6 @@ $else
 $endif
 жив
 `});
-
-//радуга-роль
-bot.loopCommand({
-code: `
-$modifyRole[840552153729728563;$roleName[840552153729728563];RANDOM]
-`,
-channel: "780181923678650399",
-executeOnStartup: true,
-every: 3000
-});
 
 bot.channelCreateCommand({ 
         channel: "753673183298846730", 
@@ -150,7 +140,7 @@ bot.status({
   text: "neokeyte",
   type: "STREAMING",
   url: "https://twitch.tv/neokeyte",
-  time: 12
+  time: 120
 });
 bot.status({
     text: "Lords of Lockerroom",
@@ -160,7 +150,7 @@ bot.status({
 bot.status({
     text: "на игру в шахматы",
     type: "WATCHING",
-    time: 20
+    time: 120
 });
 bot.status({
     text: "Need For Speed Most Wanted: Pepega Edition",
