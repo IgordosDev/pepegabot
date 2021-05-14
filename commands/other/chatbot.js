@@ -7,7 +7,7 @@ $addObjectProperty[chatbot_translate;$jsonRequest[https://normal-api.ml/translat
 $addObjectProperty[chatbot_reply;$replaceText[$jsonRequest[https://api.affiliateplus.xyz/api/chatbot?message=$getObjectProperty[user_translate]&botname=Sophia&ownername=Igordos&user=$getObjectProperty[username];message;]; ;%20;-1]]
 $onlyIf[$jsonRequest[https://api.affiliateplus.xyz/api/chatbot?message=$getObjectProperty[user_translate]&botname=Sophia&ownername=Igordos&user=$getObjectProperty[username];message;]!=;]
 $addObjectProperty[username;$replaceText[$username; ;%20;-1]]
-$addObjectProperty[user_translate;$replaceText[$jsonRequest[https://normal-api.ml/translate?text=$replaceText[$noMentionMessage; ;%20;-1]&to=en;translated;say "an error occurred in the user's translation"]; ;%20;-1]]
+$addObjectProperty[user_translate;$replaceText[$jsonRequest[https://normal-api.ml/translate?text=$replaceText[$noMentionMessage; ;%20;-1]&to=en;translated;]; ;%20;-1]]
 $botTyping
 $createObject[{}]
 $onlyIf[$getServerVar[chatbot_channel]==$channelID;]
