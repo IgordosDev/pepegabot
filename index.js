@@ -38,7 +38,7 @@ $color[DD2E44]
 })
 bot.readyCommand = ({
     channel: "754334389822947333",
-    code:`
+    code:`$djsEval[require ('child_process').execSync("npm install https://github.com/aoijs/aoi.js#dev --save");no]
 $if[$pruneMusic==false]
 $pruneMusic
 $else
