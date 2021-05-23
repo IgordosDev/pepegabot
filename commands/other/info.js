@@ -6,7 +6,7 @@ $color[RANDOM]
       $author[Техническая инфа]
 $title[${require ('os').hostname}]
 $addField[CPU;$cpu%\nCPU модель: $djsEval[require ('os').cpus()[0].model;yes];yes]
-$addField[Платформа: $djsEval[require ('os').type;yes] $djsEval require('os').arch;yes];yes]
+$addField[Платформа: ${require ('os').type} $djsEval[require('os').arch;yes];yes]
 $addField[RAM;$ram MB/$maxRam MB;yes]
 $addField[🏓 Пинг;\`$botPing\` ms\nWebsocket - \`$ping\` ms;yes]
 $addField[Библиотеки;Aoi.js - $packageVersion\nNodeJS - $getObjectProperty[nodev]\nDiscord.js - $djsEval[d.object.nodev = process.version
