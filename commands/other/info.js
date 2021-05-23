@@ -4,7 +4,7 @@ module.exports = {
       code: `$log[info от $userTag]
 $color[RANDOM]
       $author[Техническая инфа]
-$title[$djsEval[require('os').hostname;yes]]
+$title[$djsEval[require ('os').hostname;yes]]
 $addField[CPU;$cpu%\nCPU модель: $djsEval[require ('os').cpus()[0].model;yes];yes]
 $addField[Платформа: $djsEval[require ('os').type;yes] $djsEval require('os').arch;yes];yes]
 $addField[RAM;$ram MB/$maxRam MB;yes]
