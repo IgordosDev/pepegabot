@@ -14,14 +14,11 @@ const bot = new Aoijs.Bot({
 bot.musicStartCommand({
  channel: "$channelID", 
  code: `$log[$songInfo[title]]
-$setStatus[$songInfo[title];LISTENING;online]
 Сейчас играет "**$songInfo[title]**"
 `})
 bot.musicEndCommand({ 
 channel: "$channelID", 
-code: `$setStatus[your-world.ml;PLAYING;online]
-Очередь кончилась
-`})
+code: `Очередь кончилась`})
 
  
 bot.onMessage() // Allows Commands to Executed
@@ -36,9 +33,21 @@ $footer[Uptime: $uptime]
 $color[DD2E44]
 ` 
 })
+//реакции на ass и sus
+bot.command({
+name: "$alwaysExecute",
+code: `$addCmdReactions[♂️]
+$onlyIfMessageContains[$noMentionMessage;ass;]
+` 
+})
+bot.command({
+  name: "$alwaysExecute",
+  code: `$addCmdReactions[😂]
+  $onlyIfMessageContains[$noMentionMessage;sus;]
+  `})
 bot.readyCommand = ({
     channel: "754334389822947333",
-    code:`$djsEval[require ('child_process').execSync("npm install https://github.com/aoijs/aoi.js#dev --save");no]
+    code:`
 $if[$pruneMusic==false]
 $pruneMusic
 $else
@@ -114,8 +123,7 @@ bot.onPresenceUpdate()
 bot.rateLimitCommand({ 
 channel: "753673183298846730",
 code: `$title[Рейтлимиты!]
-$description[Timeout: $rateLimt[timeout]
-Limit: $rateLimit[limit]
+$description[Limit: $rateLimit[limit]
 Method: $rateLimit[method]
 Path: $rateLimit[path]
 Route: $rateLimit[route]]
@@ -153,7 +161,7 @@ bot.status({
     time: 120
 });
 bot.status({
-    text: "Need For Speed Most Wanted: Pepega Edition",
+    text: "Need For Speed Most Wanted: Pepega Mod",
     type: "PLAYING",
     time: 360
 });
