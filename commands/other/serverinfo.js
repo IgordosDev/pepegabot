@@ -2,7 +2,7 @@ module.exports = ({
 name: "serverinfo",
   aliases: ['server-info', 'server', 'сервер'],
   code: `$author[Инфо о сервере]
-  $color[$getRoleColor[$highestServerRole]]
+  $color[$replaceText[$getRoleColor[$highestServerRole];#000000;RANDOM;1]]
   $title[$serverName;https://discord.com/channels/$guildID]
   $thumbnail[$serverIcon]
   $if[$serverBoostCount!=0] $description[Бустов: $serverBoostCount] $else $endif
