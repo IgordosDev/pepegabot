@@ -156,12 +156,12 @@ bot.status({
     time: 120
 });
 bot.status({
-    text: "на игру в шахматы",
+    text: "время | $hour:$minute UTC+5:00 $timezone[Asia/Yekaterinburg]",
     type: "WATCHING",
-    time: 120
+    time: 15
 });
 bot.status({
     text: "Need For Speed Most Wanted: Pepega Mod",
     type: "PLAYING",
-    time: 360
+    time: 180
 });
