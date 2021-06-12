@@ -158,7 +158,7 @@ bot.status({
 bot.status({
     text: "время | $hour:$minute UTC+5:00 $timezone[Asia/Yekaterinburg]",
     type: "WATCHING",
-    time: 15
+    time: 5
 });
 bot.status({
     text: "Need For Speed Most Wanted: Pepega Mod",
