@@ -1,5 +1,4 @@
 const Aoijs = require("aoi.js")
-const config = require('./config.json')
 require('dotenv').config();
 
 const bot = new Aoijs.Bot({
