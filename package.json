@@ -12,7 +12,8 @@
 	"author": "Igordos",
 	"license": "ISC",
 	"dependencies": {
-		"aoi.js": "^4.0.0",
-		"ffmpeg-static": "^4.3.0"
+		"aoi.js": "^4.0.2",
+		"ffmpeg-static": "^4.3.0",
+		"dotenv": "^10.0.0"
 	}
 }
