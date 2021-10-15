@@ -33,7 +33,7 @@ $footer[Uptime: $uptime]
 $color[DD2E44]
 ` 
 })
-//реакции на ass и sus
+//реакции на ass и sus и прочие приколы от танаки
 bot.command({
 name: "$alwaysExecute",
 code: `$addCmdReactions[♂️]
@@ -45,81 +45,11 @@ bot.command({
   code: `$addCmdReactions[😂]
   $onlyIfMessageContains[$noMentionMessage;sus;]
   `})
-bot.readyCommand = ({
-    channel: "754334389822947333",
-    code:`
-$if[$pruneMusic==false]
-$pruneMusic
-$else
-$endif
-жив
-`});
-
-bot.channelCreateCommand({ 
-        channel: "753673183298846730", 
-        code: `$author[Создан новый канал]
-        $title[<#$newChannel[id]>]
-        $color[GREEN]
-        $addField[$if[$newChannel[type]==text]
-        #️⃣
-        $else
-        🎙
-        $endif $newChannel[name];$newChannel[id];yes] $addField[Тема канала;$newChannel[topic];yes] $addField[NSFW?;$if[$newChannel[nsfw]==true]
-        Да
-$else
-Нет
-$endif;yes] $addField[Слоумод;$newChannel[slowmode];yes] $addTimestamp`
-        })
-bot.onChannelCreate()
-
-bot.channelDeleteCommand({ 
-        channel: "753673183298846730", 
-        code: `$author[Удалён канал]
-        $color[RED]
-        $addField[$if[$oldChannel[type]==text]
-        #️⃣
-        $else
-        🎙
-        $endif $oldChannel[name];$oldChannel[id];yes] $addField[Тема канала;$oldChannel[topic];yes] $addField[NSFW?;$if[$oldChannel[nsfw]==true]
-        Да
-$else
-Нет
-$endif;yes] $addField[Слоумод;$oldChannel[slowmode];yes] $addTimestamp`
-        })
-bot.onChannelDelete()
-
-bot.channelUpdateCommand({ 
-        channel: "753673183298846730", 
-        code: `$author[Обновлён канал]
-        $color[YELLOW]
-$addField[До;После;yes]
-        $addField[$if[$oldChannel[type]==text]
-        #️⃣
-        $else
-        🎙
-        $endif $oldChannel[name];$if[$newChannel[type]==text]
-        #️⃣
-        $else
-        🎙
-        $endif $newChannel[name];yes] $addField[$oldChannel[topic];$newChannel[topic];yes] $addField[$if[$oldChannel[nsfw]==true]
-        NSFW-канал был
-$else
-NSFW-канал не был
-$endif;$if[$newChannel[nsfw]==true]
-        NSFW-канал стал
-$else
-Не NSFW-канал
-$endif;yes] $footer[$newChannel[id]] $addTimestamp`
-        })
-bot.onChannelUpdate()
-
-bot.presenceUpdateCommand({ 
-        channel: "753673183298846730",
-        code: `$author[$userTag;$authorAvatar] $addField[Старый статус:;$oldPresence[status]\n$oldPresence[activities]\n\nID: $oldPresence[id];yes] $addField[Новый статус:;$status\n$activity;yes]
-$footer[ID: $authorID] $addTimestamp`
-        })
-bot.onPresenceUpdate()
-
+bot.command({
+  name: "$alwaysExecute",
+  code: `$addCmdReactions[🇺🇦️]
+  $onlyIfMessageContains[$message;228;]
+  `})
 bot.rateLimitCommand({ 
 channel: "753673183298846730",
 code: `$title[Рейтлимиты!]
@@ -154,11 +84,6 @@ bot.status({
     text: "Lords of Lockerroom",
     type: "WATCHING",
     time: 120
-});
-bot.status({
-    text: "время | $hour:$minute UTC+5:00 $timezone[Asia/Yekaterinburg]",
-    type: "WATCHING",
-    time: 5
 });
 bot.status({
     text: "Need For Speed Most Wanted: Pepega Mod",
