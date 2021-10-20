@@ -4,12 +4,23 @@ require('dotenv').config();
 const bot = new Aoijs.Bot({
   sharding: false, //true or false 
   shardAmount: 2, //Shard amount 
-  mobile: false, //true or false - Discord Mobile Status
+  mobile: true, //true or false - Discord Mobile Status
   //dbhToken: "API KEY", Remove // if using, get an API Key from their Server
   token: process.env.TOKEN, //Discord Bot Token
   prefix: ["$getServerVar[prefix]"] //Change PREFIX to your Prefix
 })
-
+//переменные
+bot.variables({
+    prefix: "p!",
+    chatbot: "off",
+    chatbot_channel: "",
+    webhook_id: "0",
+    webhook_token: "",
+    pause: "0",
+    count_channel: "817846771220348928",
+    count: "4017",
+    weather: "off"
+})
 //ивенты
 bot.musicStartCommand({
  channel: "$channelID", 
@@ -31,9 +42,10 @@ $description[\`$botPing\` ms.
 Websocket: \`$ping\` ms.]
 $footer[Uptime: $uptime]
 $color[DD2E44]
+$createSlashCommand[ping;Ping;Показывает задержку процесса бота;]
 ` 
 })
-//реакции на ass и sus и прочие приколы от танаки
+//реакции на ass и sus
 bot.command({
 name: "$alwaysExecute",
 code: `$addCmdReactions[♂️]
@@ -45,11 +57,18 @@ bot.command({
   code: `$addCmdReactions[😂]
   $onlyIfMessageContains[$noMentionMessage;sus;]
   `})
+//счётчик
 bot.command({
-  name: "$alwaysExecute",
-  code: `$addCmdReactions[🇺🇦️]
-  $onlyIfMessageContains[$message;228;]
-  `})
+name: "$alwaysExecute",
+code: `$if[$sum[$getServerVar[count];1]==$message[1]]
+$setServerVar[count;$message[1]]
+$else
+$deletecommand
+$endif
+$onlyIf[$getServerVar[count_channel]==$channelID;]
+` 
+})
+//предупреждение рейтлимитов
 bot.rateLimitCommand({ 
 channel: "753673183298846730",
 code: `$title[Рейтлимиты!]
@@ -61,18 +80,6 @@ $addTimestamp
 `
 })
 bot.onRateLimit()
-
-//переменные
-bot.variables({
-    prefix: "p!",
-    chatbot: "off",
-    chatbot_channel: "",
-    webhook_id: "0",
-    webhook_token: "",
-    pause: "0",
-    counter: "817846771220348928",
-    weather: "off"
-})
 // Status
 bot.status({
   text: "neokeyte",
