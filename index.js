@@ -42,7 +42,6 @@ $description[\`$botPing\` ms.
 Websocket: \`$ping\` ms.]
 $footer[Uptime: $uptime]
 $color[DD2E44]
-$createSlashCommand[ping;Ping;Показывает задержку процесса бота;]
 ` 
 })
 //реакции на ass и sus
