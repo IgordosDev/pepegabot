@@ -18,7 +18,7 @@ bot.variables({
     webhook_token: "",
     pause: "0",
     count_channel: "817846771220348928",
-    count: "4017",
+    count: "1",
     weather: "off"
 })
 //ивенты
@@ -56,17 +56,6 @@ bot.command({
   code: `$addCmdReactions[😂]
   $onlyIfMessageContains[$noMentionMessage;sus;]
   `})
-//счётчик
-bot.command({
-name: "$alwaysExecute",
-code: `$if[$sum[$getServerVar[count];1]==$message[1]]
-$setServerVar[count;$message[1]]
-$else
-$deletecommand
-$endif
-$onlyIf[$getServerVar[count_channel]==$channelID;]
-` 
-})
 //предупреждение рейтлимитов
 bot.rateLimitCommand({ 
 channel: "753673183298846730",
