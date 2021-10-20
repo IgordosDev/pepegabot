@@ -17,8 +17,6 @@ bot.variables({
     webhook_id: "0",
     webhook_token: "",
     pause: "0",
-    count_channel: "817846771220348928",
-    count: "1",
     weather: "off"
 })
 //ивенты
