@@ -4,7 +4,7 @@ require('dotenv').config();
 const bot = new Aoijs.Bot({
   sharding: false, //true or false 
   shardAmount: 2, //Shard amount 
-  mobile: true, //true or false - Discord Mobile Status
+  mobile: false, //true or false - Discord Mobile Status
   //dbhToken: "API KEY", Remove // if using, get an API Key from their Server
   token: process.env.TOKEN, //Discord Bot Token
   prefix: ["$getServerVar[prefix]"] //Change PREFIX to your Prefix
