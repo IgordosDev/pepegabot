@@ -4,7 +4,7 @@
   "logo": "https://cdn.discordapp.com/avatars/819263848955379813/bde3aa31d9ede5937b348afb6c0c4923.png?size=512",
   "repository": "https://github.com/IgordosDev/pepegabot",
   "scripts": {
-    "postdeploy": "heroku/nodejs"
+    "postdeploy": "heroku/nodejs",
     "worker": "node index.js"
   },
   "env": {
