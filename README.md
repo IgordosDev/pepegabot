@@ -11,7 +11,7 @@
 
 ## Инструкция для правильного запуска на Heroku <sub>(если честно, я сам не сильно разобрался)</sub>
 <details>
-  <summary>1. Нажать на кнопку "Deploy on Heroku" выше.</summary>
+  <summary>1. Нажать на кнопку "Deploy to Heroku" выше.</summary>
 2. Заполнить все поля и нажать "Deploy App".
 
 <strike>3. Третьего пункта не существует, Нео.</strike>
