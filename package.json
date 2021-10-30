@@ -1,7 +1,7 @@
 {
 	"name": "pepegabot",
-	"version": "0.1.0",
-	"description": "бот для сервера пепег",
+	"version": "0.1.5",
+	"description": "бот для пепег",
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
@@ -12,8 +12,8 @@
 	"author": "Igordos",
 	"license": "ISC",
 	"dependencies": {
-		"aoi.js": "^4.0.2",
-		"ffmpeg-static": "^4.3.0",
+		"aoi.js": "^4.5.0",
+		"ffmpeg-static": "^4.4.0",
 		"dotenv": "^10.0.0"
 	}
 }
