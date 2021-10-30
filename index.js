@@ -68,9 +68,9 @@ $addTimestamp
 bot.onRateLimit()
 // Status
 bot.status({
-  text: "neokeyte",
+  text: "raifu_hardwave",
   type: "STREAMING",
-  url: "https://twitch.tv/neokeyte",
+  url: "https://twitch.tv/raifu_hardwave",
   time: 120
 });
 bot.status({
@@ -79,7 +79,7 @@ bot.status({
     time: 120
 });
 bot.status({
-    text: "Need For Speed Most Wanted: Pepega Mod",
+    text: "Need For Speed Most Wanted: Pepega Edition",
     type: "PLAYING",
     time: 180
 });
