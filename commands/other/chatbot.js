@@ -20,10 +20,11 @@ $sendWebhook[$getServerVar[webhook_id];$getServerVar[webhook_token];Chatbot mode
 $else
 $log[chatbot on by $userTag]
 $setServerVar[chatbot;on]
-$sendWebhook[$splitText[1];$splitText[2];Chatbot mode ✅\nПереводы могут быть неверны]
+$sendWebhook[$splitText[1];$splitText[2];Chatbot mode ✅]
 $setServerVar[chatbot_channel;$channelID]
 $setServerVar[webhook_token;$splitText[2]]
 $setServerVar[webhook_id;$splitText[1]]
-  $textSplit[$createWebhook[$channelID;Sophia;https://media.wonderlandmagazine.com/uploads/2019/08/Sophia-the-Robot-portrait.jpg;yes;/];/]
+  $textSplit[$createWebhook[$channelID;Sophia;https://cdn.discordapp.com/attachments/863356751897296896/904082889388486748/dCCuLYSjIhc.png;yes;/];/] // оригинал аватара https://www.deviantart.com/duh-smeha/art/GLaDOS-483102060
 $endif
-$argsCheck[0;]`}]
+$argsCheck[0;]
+`}]
