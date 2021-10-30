@@ -1,0 +1,19 @@
+{
+  "name": "PepegaBot",
+  "description": "бот для сервера пепег",
+  "logo": "https://cdn.discordapp.com/avatars/819263848955379813/bde3aa31d9ede5937b348afb6c0c4923.png?size=512",
+  "repository": "https://github.com/IgordosDev/pepegabot",
+  "scripts": {
+    "postdeploy": "bin/init-deployment"
+  },
+  "env": {
+    "TOKEN": {
+      "description": "Токен вашего бота. Генерируется здесь: https://discord.com/developers/applications",
+      "required": true
+    },
+    "SNAPSHOT": {
+      "description": "Ключ к API снапшотов. Генерируется здесь: https://apiflash.com/ (необязателен, но команда \"snapshot\" работать без него не будет)",
+      "required": false
+    }
+  }
+}
