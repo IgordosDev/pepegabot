@@ -14,4 +14,5 @@ $color[RANDOM]
       $botTyping
 $onlyIf[$isValidLink[$message[1]]==true;Где ссылка]
 $argsCheck[>1;Введи ссылку, на неё будет сделан скриншот <:Okayga:755125944498520255>]
+$onlyIf[${process.env.SNAPHOT}!=;]
       `}
