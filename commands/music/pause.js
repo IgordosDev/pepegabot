@@ -1,14 +1,14 @@
 module.exports = ({
     name: "pause",
     aliases: ['resume'],
-    code: `$log[Pause от $userTag]
+    code: `
     $if[$getServerVar[pause]==0]
     $setServerVar[pause;1]
     $pauseSong
-    Плеер поставлен на паузу <:Okayge:816271601162649610><a:TeaTime:782163966168137728>
+    Плеер поставлен на паузу
     $else
     $setServerVar[pause;0]
     $resumeSong
-    Плеер снят с паузы <a:pepegaJAM:753708890188808393>
+    Плеер снят с паузы
     $endif
     `});

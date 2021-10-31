@@ -1,7 +1,7 @@
 module.exports = ({
     name: "now-playing",
     aliases: ['np', 'nowplaying'],
-    code: `$log[Now-playing от $userTag]
+    code: `
     $author[$songInfo[publisher];;$songInfo[publisher_url]]
     $title[$songInfo[title];$songInfo[url]]
     $addField[Добавил(а) в плейлист:;<@!$songInfo[userID]>;yes]
