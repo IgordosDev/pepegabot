@@ -7,6 +7,8 @@
 
 ![Discord Server](https://img.shields.io/discord/753669010318426323?logo=discord&logoColor=7289da&style=plastic) <sub>(просто для лулза, кнопка нерабочая)</sub>
 
+<a href="https://discord.com/api/oauth2/authorize?client_id=819263848955379813&permissions=37604416&scope=bot%20applications.commands"><img src="https://img.shields.io/static/v1?label=Invite%20Me&message=PepegaBot%235596&plastic&color=7289da&logo=discord&logoColor=7289da"></img></a> <sub>(сейчас не рекомендуется)</sub>
+
 **⚠️ Крайне рекомендуется пересмотреть весь код заранее, заменить все ID каналов, юзеров на собственные, так как бот направлен на один сервер.**
 
 ## Инструкция для правильного запуска на Heroku <sub>(если честно, я сам не сильно разобрался)</sub>
