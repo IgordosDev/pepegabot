@@ -15,6 +15,7 @@
 		"aoi.js": "^4.5.0",
 		"ffmpeg-static": "^4.4.0",
 		"dotenv": "^10.0.0",
-		"dbd.js-utils": "^0.1.1"
+		"dbd.js-utils": "^0.1.1",
+		"discord.js" : "^13.3.0"
 	}
 }
