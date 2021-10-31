@@ -3,7 +3,7 @@ module.exports = {
       aliases: ['stats', 'bs', 'stata', 'стата'],
       code: `$log[info от $userTag]
 $color[RANDOM]
-      $author[Техническая инфа]
+      $author[Техническая информация]
       $title[Сервер: ${require ('os').hostname}]
       $thumbnail[$userAvatar[$clientID]]
 $addField[Библиотеки(и нода);Aoi.js - $packageVersion\nNodeJS - $getObjectProperty[nodev]\nDiscord.js - $djsEval[d.object.nodev = process.version

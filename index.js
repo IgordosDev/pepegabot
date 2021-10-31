@@ -16,11 +16,9 @@ bot.variables({
     chatbot_channel: "",
     webhook_id: "0",
     webhook_token: "",
-    pause: "0",
-    weather: "off"
+    pause: "0"
 })
 //ивенты
-bot.onMusicStart()
 bot.musicStartCommand({
  channel: "$channelID", 
  code: `
