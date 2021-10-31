@@ -26,7 +26,7 @@ bot.musicStartCommand({
 `})
 bot.musicEndCommand({ 
 channel: "$channelID", 
-code: `Очередь закончилась`})
+code: `Прошло 2 минуты бездействия, я ливаю с войса`})
 
  
 bot.onMessage() // Allows Commands to Executed
