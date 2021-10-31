@@ -20,14 +20,15 @@ bot.variables({
     weather: "off"
 })
 //ивенты
+bot.onMusicStart()
 bot.musicStartCommand({
  channel: "$channelID", 
- code: `$log[$songInfo[title]]
+ code: `
 Сейчас играет "**$songInfo[title]**"
 `})
 bot.musicEndCommand({ 
 channel: "$channelID", 
-code: `Очередь кончилась`})
+code: `Очередь закончилась`})
 
  
 bot.onMessage() // Allows Commands to Executed
