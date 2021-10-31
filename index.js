@@ -53,8 +53,7 @@ name: "$alwaysExecute",
 code: `$addCmdReactions[♂️]
 $onlyIfMessageContains[$noMentionMessage;ass;]
 ` 
-})
-bot.command({
+}, {
   name: "$alwaysExecute",
   code: `$addCmdReactions[😂]
   $onlyIfMessageContains[$noMentionMessage;sus;]
