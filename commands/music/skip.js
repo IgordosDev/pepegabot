@@ -3,6 +3,7 @@ module.exports = ({
     code: `
     Трек скипнут
     $skipSong
+    $onlyIf[$queueLength>1;В очереди ничего нет]
     $onlyIf[$voiceID!=;Зайди в войс]
-    $onlyIf[$voiceID==$voiceID[$clientID];Либо ты в другом войсе, либо тебя вообще в войсе нет <:Pepega:779683581844521000>]`
+    $onlyIf[$voiceID==$voiceID[$clientID];Либо ты в другом войсе, либо тебя вообще в войсе нет]`
     });

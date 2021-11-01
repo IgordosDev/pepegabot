@@ -31,7 +31,7 @@ code: `Прошло 2 минуты бездействия, я ливаю с во
  
 bot.onMessage() // Allows Commands to Executed
 bot.loadCommands(`./commands/`) //Allows Commands executed by `commands` folder
-bot.readyCommand({ //проверка на наличие новой версии библиотеки
+bot.readyCommand({ //проверка на наличие новой версии библиотеки при каждом запуске бота
   channel: "753673183298846730",
   code: `<@!$botOwnerID>, доступна новая версия библиотеки aoi.js \`$jsonRequest[https://api.leref.ga/package/version;version;]\`, желательно поменять её в **package.json** или вырезать эту строчку об напоминании
   $onlyIf[$jsonRequest[https://api.leref.ga/package/version;version;$packageVersion]!=$packageVersion;]

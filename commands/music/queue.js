@@ -7,6 +7,6 @@ module.exports = ({
     $endif
     $description[$queue[1;10;**{number}**. [{title}]({url}) (<@!{userID}>)]]
     $footer[Команду вызвал $username[$authorID];$authorAvatar]
-    $onlyIf[$queueLength>0;Очередь пуста]
+    $onlyIf[$queueLength>1;Очередь пуста]
     `
     });

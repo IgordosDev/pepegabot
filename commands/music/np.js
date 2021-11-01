@@ -7,4 +7,5 @@ module.exports = ({
     $addField[Добавил(а) в плейлист:;<@!$songInfo[userID]>;yes]
     $addField[Длительность:;$replaceText[-$songInfo[duration_left]/$songInfo[duration];Seconds;секунд;-1];yes]
     $image[$songInfo[thumbnail]]
+    $onlyIf[$queueLength>0;Сейчас ничего не играет]
     `});
