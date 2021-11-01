@@ -24,9 +24,9 @@ bot.musicStartCommand({
  code: `
 Сейчас играет "**$songInfo[title]**"
 `})
-bot.musicEndCommand({ 
+/* bot.musicEndCommand({ 
 channel: "$channelID", 
-code: `Прошло 2 минуты бездействия, я ливаю с войса`})
+code: `Прошло 2 минуты бездействия, я ливаю с войса`}) */
 
  
 bot.onMessage() // Allows Commands to Executed
