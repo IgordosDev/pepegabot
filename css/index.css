@@ -109,6 +109,10 @@ body {
     width: 100%;
   }
     
+  .mob-shit {
+    width: 350px;
+  }
+    
   .wrapper-1 {
     display: inline-block;
     align-items: center;
