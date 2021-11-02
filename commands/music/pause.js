@@ -11,4 +11,7 @@ module.exports = ({
     $resumeSong
     Плеер снят с паузы
     $endif
+    $onlyIf[$songInfo[title]!=songError: Nothing is being played;Сейчас ничего не играет]
+    $onlyIf[$voiceID!=;Зайди в войс]
+    $onlyIf[$voiceID==$voiceID[$clientID];Либо ты в другом войсе, либо тебя вообще в войсе нет]
     `});
