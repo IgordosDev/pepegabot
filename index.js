@@ -58,7 +58,7 @@ $onlyIfMessageContains[$noMentionMessage;ass;]
   $onlyIfMessageContains[$noMentionMessage;sus;]
   `}, {
     name: "$alwaysExecute",
-    code: `$addCmdReactions[:flag_ua:]
+    code: `$addCmdReactions[🇺🇦]
     $onlyIfMessageContains[$noMentionMessage;228;]
     `})
 //предупреждение рейтлимитов
