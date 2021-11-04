@@ -46,7 +46,7 @@ $footer[Uptime: $uptime]
 $color[DD2E44]
 ` 
 })
-//реакции на ass и sus
+//реакции(не все) Tanaka#7762
 bot.command({
 name: "$alwaysExecute",
 code: `$addCmdReactions[♂️]
@@ -56,7 +56,11 @@ $onlyIfMessageContains[$noMentionMessage;ass;]
   name: "$alwaysExecute",
   code: `$addCmdReactions[😂]
   $onlyIfMessageContains[$noMentionMessage;sus;]
-  `})
+  `}, {
+    name: "$alwaysExecute",
+    code: `$addCmdReactions[:flag_ua:]
+    $onlyIfMessageContains[$noMentionMessage;228;]
+    `})
 //предупреждение рейтлимитов
 bot.rateLimitCommand({ 
 channel: "753673183298846730",
