@@ -2,16 +2,16 @@ module.exports = {
       name: "ip",
 aliases:['IP', 'Ip'],
       code: `
-      $title[$jsonRequest[$getObjectProperty[link];query;Nothing]]
-$description[Континент: $jsonRequest[$getObjectProperty[link];continent;Nothing]
-Страна: :flag_$toLowercase[$jsonRequest[$getObjectProperty[link];countryCode;white]]: $jsonRequest[$getObjectProperty[link];country;Nothing]
-Регион: ($jsonRequest[$getObjectProperty[link];region;Nothing]) $jsonRequest[$getObjectProperty[link];regionName;Nothing]
-Город: $jsonRequest[$getObjectProperty[link];city;Nothing]
-Индекс: $jsonRequest[$getObjectProperty[link];zip;Nothing]
-Широта: $jsonRequest[$getObjectProperty[link];lat;Nothing]/Долгота: $jsonRequest[$getObjectProperty[link];lon;Nothing]
-Таймзона: $jsonRequest[$getObjectProperty[link];timezone;Nothing]
-ISP: $jsonRequest[$getObjectProperty[link];isp;Nothing]
-Организация: $jsonRequest[$getObjectProperty[link];org;Nothing]]
+      $title[$jsonRequest[$getObjectProperty[link];query;]]
+$description[Континент: $jsonRequest[$getObjectProperty[link];continent;]
+Страна: :flag_$toLowercase[$jsonRequest[$getObjectProperty[link];countryCode;white]]: $jsonRequest[$getObjectProperty[link];country;]
+Регион: ($jsonRequest[$getObjectProperty[link];region;]) $jsonRequest[$getObjectProperty[link];regionName;]
+Город: $jsonRequest[$getObjectProperty[link];city;]
+Индекс: $jsonRequest[$getObjectProperty[link];zip;]
+Широта: $jsonRequest[$getObjectProperty[link];lat;]/Долгота: $jsonRequest[$getObjectProperty[link];lon;]
+Таймзона: $jsonRequest[$getObjectProperty[link];timezone;]
+ISP: $jsonRequest[$getObjectProperty[link];isp;]
+Организация: $jsonRequest[$getObjectProperty[link];org;]]
 $color[RANDOM]
 
 $onlyIf[$jsonRequest[$getObjectProperty[link];status;]==success;Неудачный запрос, возможно адрес неверный \¯\\\_\(\ツ\)\_\/\¯]
