@@ -1,6 +1,6 @@
 {
 	"name": "pepegabot",
-	"version": "0.1.7",
+	"version": "0.1.8",
 	"description": "бот для пепег",
 	"main": "index.js",
 	"scripts": {
@@ -12,7 +12,7 @@
 	"author": "Igordos",
 	"license": "ISC",
 	"dependencies": {
-		"aoi.js": "^4.6.0",
+		"aoi.js": "^5.0.0",
 		"dotenv": "^10.0.0",
 		"dbd.js-utils": "^0.1.1"
 	}
