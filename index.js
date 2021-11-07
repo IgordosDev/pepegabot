@@ -1,7 +1,7 @@
-const Aoijs = require("aoi.js")
+const aoijs = require("aoi.js")
 require('dotenv').config();
 
-const bot = new Aoijs.Bot({
+const bot = new aoijs.Bot({
   sharding: false, //true or false 
   shardAmount: 2, //Shard amount 
   mobile: false, //true or false - Discord Mobile Status
