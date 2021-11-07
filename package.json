@@ -9,7 +9,7 @@
 		"lint": "eslint ."
 	},
 	"engines": {
-		"node": "16.13.0"
+		"node": "16.6.1"
 	},
 	"keywords": [],
 	"author": "Igordos",
