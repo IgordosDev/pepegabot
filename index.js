@@ -1,16 +1,16 @@
-const aoijs = require("aoi.js")
+const Aoijs = require("aoi.js")
 require('dotenv').config();
 
-const bot = new aoijs.Bot({
+const bot = new Aoijs.Bot({
   sharding: false, //true or false 
   shardAmount: 2, //Shard amount 
   mobile: false, //true or false - Discord Mobile Status
   //dbhToken: "API KEY", // Remove // if using, get an API Key from their Server
   token: process.env.TOKEN, //Discord Bot Token
   prefix: ["$getServerVar[prefix]"], //Change PREFIX to your Prefix
-  respondOnEdit: {command:true,alwaysExecute:false,nonPrefixed:false,timeLimit:60000},
-  intents: ["GUILDS","GUILD_MESSAGES"],
-  autoUpdate:true
+// respondOnEdit: {command:true,alwaysExecute:false,nonPrefixed:false,timeLimit:60000},
+// intents: ["GUILDS","GUILD_MESSAGES"],
+// autoUpdate:false
 })
 //переменные
 bot.variables({
@@ -32,14 +32,16 @@ channel: "$channelID",
 code: ``}) */
  
 bot.onMessage() // Allows Commands to Executed
-const loader = new aoijs.LoadCommands(bot)
-loader.load(bot.cmd,"./commands/")
-/* bot.readyCommand({ //проверка на наличие новой версии библиотеки при каждом запуске бота
+/* const loader = new aoijs.LoadCommands(bot)
+loader.load(bot.cmd,"./commands/") */
+bot.loadCommands(`./commands/`)
+bot.readyCommand({ //проверка на наличие новой версии библиотеки при каждом запуске бота
   channel: "906867817545084938",
   code: `<@!$botOwnerID>, доступна новая версия библиотеки aoi.js \`$jsonRequest[https://api.leref.ga/package/version;version;]\`, желательно поменять её в **package.json** или вырезать эту строчку об напоминании
+  $onlyIf[$jsonRequest[https://api.leref.ga/package/version;version;$packageVersion]!=5.0.0;Ещё один блядский запуск бота с версией 4.6.0]
   $onlyIf[$jsonRequest[https://api.leref.ga/package/version;version;$packageVersion]!=$packageVersion;]
   $onlyIf[$jsonRequest[https://api.leref.ga/package/version;status;]==200;Сделать запрос на наличие новой версии библиотеки не удалось.]
-`}) */
+`})
 bot.command({
 name: "ping", 
 code: `
@@ -66,7 +68,7 @@ $onlyIfMessageContains[$noMentionMessage;ass;]
     $onlyIfMessageContains[$noMentionMessage;228;]
     `})
 //предупреждение рейтлимитов
-/* bot.onRateLimit({ 
+/bot.rateLimitCommand({ 
 channel: "906868027398692904",
 code: `$title[Рейтлимиты!]
 $description[Limit: $rateLimit[limit]
@@ -75,22 +77,25 @@ Path: $rateLimit[path]
 Route: $rateLimit[route]]
 $addTimestamp
 `
-}) */
+})
 // Status
 bot.status({
   text: "raifu_hardwave",
   type: "STREAMING",
   url: "https://twitch.tv/raifu_hardwave",
   time: 120
-}), ({
+})
+bot.status({
     text: "Lords of Lockerroom",
     type: "WATCHING",
     time: 120
-}), ({
+})
+bot.status({
     text: "Need For Speed Most Wanted: Pepega Edition",
     type: "PLAYING",
     time: 180
-}), ({
+})
+bot.status({
   text: "прочитанных шутках кота джокера",
   type: "COMPETING",
   time: 120
