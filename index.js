@@ -5,7 +5,7 @@ const bot = new aoijs.Bot({
   sharding: false, //true or false 
   shardAmount: 2, //Shard amount 
   mobile: false, //true or false - Discord Mobile Status
-  //dbhToken: "API KEY", Remove // if using, get an API Key from their Server
+  //dbhToken: "API KEY", // Remove // if using, get an API Key from their Server
   token: process.env.TOKEN, //Discord Bot Token
   prefix: ["$getServerVar[prefix]"], //Change PREFIX to your Prefix
   respondOnEdit: {command:true,alwaysExecute:false,nonPrefixed:false,timeLimit:60000},
@@ -66,7 +66,7 @@ $onlyIfMessageContains[$noMentionMessage;ass;]
     $onlyIfMessageContains[$noMentionMessage;228;]
     `})
 //предупреждение рейтлимитов
-bot.rateLimitCommand({ 
+bot.onRateLimit({ 
 channel: "906868027398692904",
 code: `$title[Рейтлимиты!]
 $description[Limit: $rateLimit[limit]
@@ -76,21 +76,22 @@ Route: $rateLimit[route]]
 $addTimestamp
 `
 })
-bot.onRateLimit()
 // Status
 bot.status({
   text: "raifu_hardwave",
   type: "STREAMING",
   url: "https://twitch.tv/raifu_hardwave",
   time: 120
-});
-bot.status({
+}), ({
     text: "Lords of Lockerroom",
     type: "WATCHING",
     time: 120
-});
-bot.status({
+}), ({
     text: "Need For Speed Most Wanted: Pepega Edition",
     type: "PLAYING",
     time: 180
-});
+}), ({
+  text: "прочитанных шутках кота джокера",
+  type: "COMPETING",
+  time: 120
+})
