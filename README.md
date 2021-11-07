@@ -1,13 +1,13 @@
 > # PepegaBot <img align="right" src="https://cdn.discordapp.com/avatars/819263848955379813/bde3aa31d9ede5937b348afb6c0c4923.png?size=512" alt="avatar" title="pepegabot" width="15%">
-Бот, предназначенный для моего сервера друзей. Сервер является закрытым, ссылки не распространяются.
+Бот, предназначенный для моего сервера друзей.
 
 Бот уже направлен для работы на Heroku.
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-![Discord Server](https://img.shields.io/discord/753669010318426323?logo=discord&logoColor=7289da&style=plastic) <sub>(просто для лулза, кнопка нерабочая)</sub>
+<a href="https://discord.gg/RqnU6VB9cT"><img src="https://img.shields.io/discord/753669010318426323?logo=discord&logoColor=7289da&style=plastic"></img></a>
 
-<a href="https://discord.com/api/oauth2/authorize?client_id=819263848955379813&permissions=37604416&scope=bot%20applications.commands"><img src="https://img.shields.io/static/v1?label=Invite%20Me&message=PepegaBot%235596&plastic&color=7289da&logo=discord&logoColor=7289da"></img></a> <sub>(сейчас не рекомендуется)</sub>
+<a href="https://discord.com/api/oauth2/authorize?client_id=819263848955379813&permissions=37604416&scope=bot%20applications.commands"><img src="https://img.shields.io/static/v1?label=Invite%20Me&message=PepegaBot%235596&style=plastic&color=7289da&logo=discord&logoColor=7289da"></img></a>
 
 **⚠️ Крайне рекомендуется пересмотреть весь код заранее, заменить все ID каналов, юзеров на собственные, так как бот направлен на один сервер.**
 
