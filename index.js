@@ -32,7 +32,8 @@ channel: "$channelID",
 code: ``}) */
  
 bot.onMessage() // Allows Commands to Executed
-bot.loadCommands(`./commands/`) //Allows Commands executed by `commands` folder
+const loader = new aoijs.LoadCommands(bot)
+loader.load(bot.cmd,"./commands/")
 /* bot.readyCommand({ //проверка на наличие новой версии библиотеки при каждом запуске бота
   channel: "906867817545084938",
   code: `<@!$botOwnerID>, доступна новая версия библиотеки aoi.js \`$jsonRequest[https://api.leref.ga/package/version;version;]\`, желательно поменять её в **package.json** или вырезать эту строчку об напоминании
