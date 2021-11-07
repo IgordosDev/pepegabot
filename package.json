@@ -12,7 +12,7 @@
 	"author": "Igordos",
 	"license": "ISC",
 	"dependencies": {
-		"aoi.js": "^5.0.0",
+		"aoi.js": "^4.6.0",
 		"dotenv": "^10.0.0",
 		"dbd.js-utils": "^0.1.1"
 	}

@@ -5,13 +5,11 @@
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-<a href="https://discord.gg/RqnU6VB9cT"><img src="https://img.shields.io/discord/753669010318426323?logo=discord&logoColor=7289da&style=plastic"></img></a>
-
-<a href="https://discord.com/api/oauth2/authorize?client_id=819263848955379813&permissions=37604416&scope=bot%20applications.commands"><img src="https://img.shields.io/static/v1?label=Invite%20Me&message=PepegaBot%235596&style=plastic&color=7289da&logo=discord&logoColor=7289da"></img></a>
+<a href="https://discord.gg/RqnU6VB9cT"><img src="https://img.shields.io/discord/753669010318426323?logo=discord&logoColor=7289da&style=plastic"></img></a> <a href="https://discord.com/api/oauth2/authorize?client_id=819263848955379813&permissions=37604416&scope=bot%20applications.commands"><img src="https://img.shields.io/static/v1?label=Invite%20Me&message=PepegaBot%235596&style=plastic&color=7289da&logo=discord&logoColor=7289da"></img></a>
 
 **⚠️ Крайне рекомендуется пересмотреть весь код заранее, заменить все ID каналов, юзеров на собственные, так как бот направлен на один сервер.**
 
-## Инструкция для правильного запуска на Heroku <sub>(если честно, я сам не сильно разобрался)</sub>
+## Инструкция для правильного<sub>(нет)</sub> запуска на Heroku
 <details>
   <summary>1. Нажать на кнопку "Deploy to Heroku" выше.</summary>
 2. Заполнить все поля и нажать "Deploy App".
