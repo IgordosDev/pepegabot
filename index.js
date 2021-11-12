@@ -72,7 +72,7 @@ $onlyIfMessageContains[$noMentionMessage;ass;fuck;master;]
       $onlyIfMessageContains[$toLowercase[$noMentionMessage];привет;]
       `})
 //предупреждение рейтлимитов
-/bot.onRateLimit({ 
+/* bot.onRateLimit({ 
 channel: "906868027398692904",
 code: `$title[Рейтлимиты!]
 $description[Limit: $rateLimit[limit]
@@ -81,7 +81,7 @@ Path: $rateLimit[path]
 Route: $rateLimit[route]]
 $addTimestamp
 `
-})
+}) */
 // Status
 bot.status({
   text: "raifu_hardwave",
