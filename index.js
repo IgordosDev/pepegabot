@@ -38,7 +38,7 @@ bot.loadCommands(`./commands/`)
 /* bot.readyCommand({ //проверка на наличие новой версии библиотеки при каждом запуске бота
   channel: "906867817545084938",
   code: `<@!$botOwnerID>, доступна новая версия библиотеки aoi.js \`$jsonRequest[https://api.leref.ga/package/version;version;]\`, желательно поменять её в **package.json** или вырезать эту строчку об напоминании
-  $onlyIf[$jsonRequest[https://api.leref.ga/package/version;version;$packageVersion]!=5.0.0;Ещё один блядский запуск бота с версией 4.6.0]
+  $onlyIf[$jsonRequest[https://api.leref.ga/package/version;version;$packageVersion]!=5.0.1;Ещё один блядский запуск бота с версией 4.6.0]
   $onlyIf[$jsonRequest[https://api.leref.ga/package/version;version;$packageVersion]!=$packageVersion;]
   $onlyIf[$jsonRequest[https://api.leref.ga/package/version;status;]==200;Сделать запрос на наличие новой версии библиотеки не удалось.]
 `}) */
