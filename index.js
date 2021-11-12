@@ -69,7 +69,8 @@ $onlyIfMessageContains[$noMentionMessage;ass;fuck;master;]
     `}, {
       name: "$alwaysExecute",
       code: `Привет
-      $onlyIfMessageContains[$toLowercase[$noMentionMessage];привет;]
+      $cooldown[3s;]
+      $onlyIfMessageContains[$toLowercase[$noMentionMessage[1]];привет;]
       `})
 //предупреждение рейтлимитов
 bot.rateLimitCommand({ 
