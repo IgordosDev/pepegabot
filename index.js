@@ -1,4 +1,4 @@
-const Aoijs = require("aoi.js")
+const aoijs = require("aoi.js")
 require('dotenv').config();
 
 const bot = new Aoijs.Bot({
@@ -8,9 +8,9 @@ const bot = new Aoijs.Bot({
   //dbhToken: "API KEY", // Remove // if using, get an API Key from their Server
   token: process.env.TOKEN, //Discord Bot Token
   prefix: ["$getServerVar[prefix]"], //Change PREFIX to your Prefix
-// respondOnEdit: {command:true,alwaysExecute:false,nonPrefixed:false,timeLimit:60000},
-// intents: ["GUILDS","GUILD_MESSAGES"],
-// autoUpdate:false
+  respondOnEdit: {command:true,alwaysExecute:false,nonPrefixed:false,timeLimit:60000},
+  intents: ["GUILDS","GUILD_MESSAGES"],
+  autoUpdate:true
 })
 //переменные
 bot.variables({
@@ -31,17 +31,17 @@ bot.musicEndCommand({
 channel: "$channelID", 
 code: ``}) */
  
-bot.onMessage() // Allows Commands to Executed
-/* const loader = new aoijs.LoadCommands(bot)
-loader.load(bot.cmd,"./commands/") */
+// bot.onMessage() // Allows Commands to Executed
+const loader = new aoijs.LoadCommands(bot)
+loader.load(bot.cmd,"./commands/")
 bot.loadCommands(`./commands/`)
-bot.readyCommand({ //проверка на наличие новой версии библиотеки при каждом запуске бота
+/* bot.readyCommand({ //проверка на наличие новой версии библиотеки при каждом запуске бота
   channel: "906867817545084938",
   code: `<@!$botOwnerID>, доступна новая версия библиотеки aoi.js \`$jsonRequest[https://api.leref.ga/package/version;version;]\`, желательно поменять её в **package.json** или вырезать эту строчку об напоминании
   $onlyIf[$jsonRequest[https://api.leref.ga/package/version;version;$packageVersion]!=5.0.0;Ещё один блядский запуск бота с версией 4.6.0]
   $onlyIf[$jsonRequest[https://api.leref.ga/package/version;version;$packageVersion]!=$packageVersion;]
   $onlyIf[$jsonRequest[https://api.leref.ga/package/version;status;]==200;Сделать запрос на наличие новой версии библиотеки не удалось.]
-`})
+`}) */
 bot.command({
 name: "ping", 
 code: `
@@ -56,19 +56,23 @@ $color[DD2E44]
 bot.command({
 name: "$alwaysExecute",
 code: `$addCmdReactions[♂️]
-$onlyIfMessageContains[$noMentionMessage;ass;]
+$onlyIfMessageContains[$noMentionMessage;ass;fuck;master;]
 ` 
 }, {
   name: "$alwaysExecute",
   code: `$addCmdReactions[😂]
-  $onlyIfMessageContains[$noMentionMessage;sus;]
+  $onlyIfMessageContains[$toLowercase[$noMentionMessage];sus;]
   `}, {
     name: "$alwaysExecute",
     code: `$addCmdReactions[🇺🇦]
     $onlyIfMessageContains[$noMentionMessage;228;]
-    `})
+    `}, {
+      name: "$alwaysExecute",
+      code: `Привет
+      $onlyIfMessageContains[$toLowercase[$noMentionMessage];привет;]
+      `})
 //предупреждение рейтлимитов
-/bot.rateLimitCommand({ 
+/bot.onRateLimit({ 
 channel: "906868027398692904",
 code: `$title[Рейтлимиты!]
 $description[Limit: $rateLimit[limit]
