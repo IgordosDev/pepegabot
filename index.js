@@ -1,16 +1,16 @@
-const aoijs = require("aoi.js")
+const Aoijs = require("aoi.js")
 require('dotenv').config();
 
-const bot = new aoijs.Bot({
+const bot = new Aoijs.Bot({
   sharding: false, //true or false 
   shardAmount: 2, //Shard amount 
   mobile: false, //true or false - Discord Mobile Status
   //dbhToken: "API KEY", // Remove // if using, get an API Key from their Server
   token: process.env.TOKEN, //Discord Bot Token
   prefix: ["$getServerVar[prefix]"], //Change PREFIX to your Prefix
-  respondOnEdit: {command:true,alwaysExecute:false,nonPrefixed:false,timeLimit:60000},
+/*  respondOnEdit: {command:true,alwaysExecute:false,nonPrefixed:false,timeLimit:60000},
   intents: ["GUILDS","GUILD_MESSAGES"],
-  autoUpdate:true
+  autoUpdate:true */
 })
 //переменные
 bot.variables({
@@ -32,9 +32,9 @@ channel: "$channelID",
 code: ``}) */
  
 bot.onMessage() // Allows Commands to Executed
-const loader = new aoijs.LoadCommands(bot)
-loader.load(bot.cmd,"./commands/")
-// bot.loadCommands(`./commands/`)
+/* const loader = new aoijs.LoadCommands(bot)
+loader.load(bot.cmd,"./commands/") */
+bot.loadCommands(`./commands/`)
 /* bot.readyCommand({ //проверка на наличие новой версии библиотеки при каждом запуске бота
   channel: "906867817545084938",
   code: `<@!$botOwnerID>, доступна новая версия библиотеки aoi.js \`$jsonRequest[https://api.leref.ga/package/version;version;]\`, желательно поменять её в **package.json** или вырезать эту строчку об напоминании
@@ -72,7 +72,7 @@ $onlyIfMessageContains[$noMentionMessage;ass;fuck;master;]
       $onlyIfMessageContains[$toLowercase[$noMentionMessage];привет;]
       `})
 //предупреждение рейтлимитов
-/* bot.onRateLimit({ 
+bot.rateLimitCommand({ 
 channel: "906868027398692904",
 code: `$title[Рейтлимиты!]
 $description[Limit: $rateLimit[limit]
@@ -81,7 +81,7 @@ Path: $rateLimit[path]
 Route: $rateLimit[route]]
 $addTimestamp
 `
-}) */
+})
 // Status
 bot.status({
   text: "raifu_hardwave",
