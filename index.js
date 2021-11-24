@@ -1,10 +1,10 @@
-const Aoijs = require("aoi.js")
+﻿const Aoijs = require("aoi.js")
 require('dotenv').config();
 
 const bot = new Aoijs.Bot({
   sharding: false, //true or false 
   shardAmount: 2, //Shard amount 
-  mobile: false, //true or false - Discord Mobile Status
+  mobile: true, //true or false - Discord Mobile Status
   //dbhToken: "API KEY", // Remove // if using, get an API Key from their Server
   token: process.env.TOKEN, //Discord Bot Token
   prefix: ["$getServerVar[prefix]"], //Change PREFIX to your Prefix
@@ -42,6 +42,16 @@ bot.loadCommands(`./commands/`)
   $onlyIf[$jsonRequest[https://api.leref.ga/package/version;version;$packageVersion]!=$packageVersion;]
   $onlyIf[$jsonRequest[https://api.leref.ga/package/version;status;]==200;Сделать запрос на наличие новой версии библиотеки не удалось.]
 `}) */
+//напоминание о существовании проекта (нужно только для разрабов)
+bot.loopCommand({
+  code: `
+  <@!694849711437250581> дебикс когда займёшься то?
+  https://github.com/IgordosDev/pepegabot/projects/1#column-16653650
+  `,
+  channel: "906867817545084938",
+  executeOnStartup: true,
+  every: 259200000
+})
 bot.command({
 name: "ping", 
 code: `
@@ -66,12 +76,7 @@ $onlyIfMessageContains[$noMentionMessage;ass;fuck;master;]
     name: "$alwaysExecute",
     code: `$addCmdReactions[🇺🇦]
     $onlyIfMessageContains[$noMentionMessage;228;]
-    `}, {
-      name: "$alwaysExecute",
-      code: `Привет
-      $cooldown[3s;]
-      $onlyIfMessageContains[$toLowercase[$noMentionMessage[1]];привет;]
-      `})
+    `})
 //предупреждение рейтлимитов
 bot.rateLimitCommand({ 
 channel: "906868027398692904",

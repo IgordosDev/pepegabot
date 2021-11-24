@@ -1,6 +1,6 @@
 {
 	"name": "pepegabot",
-	"version": "0.1.8",
+	"version": "0.1.9",
 	"description": "бот для пепег",
 	"main": "index.js",
 	"scripts": {
