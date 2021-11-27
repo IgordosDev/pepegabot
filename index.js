@@ -49,7 +49,7 @@ bot.loopCommand({
   https://github.com/IgordosDev/pepegabot/projects/1#column-16653650
   `,
   channel: "906867817545084938",
-  executeOnStartup: true,
+  executeOnStartup: false,
   every: 259200000
 })
 bot.command({
