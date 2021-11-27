@@ -5,7 +5,7 @@
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-<a href="https://discord.com/api/oauth2/authorize?client_id=819263848955379813&permissions=37604416&scope=bot%20applications.commands"><img src="https://img.shields.io/static/v1?label=Invite%20Me&message=PepegaBot%235596&style=plastic&color=7289da&logo=discord&logoColor=7289da"></img></a>
+<a href="https://discord.com/api/oauth2/authorize?client_id=819263848955379813&permissions=414501948480&scope=bot%20applications.commands"><img src="https://img.shields.io/static/v1?label=Invite%20Me&message=PepegaBot%235596&style=plastic&color=7289da&logo=discord&logoColor=7289da"></img></a>
 
 <a href="https://discord.gg/RqnU6VB9cT"> <img src="https://discordapp.com/api/guilds/753669010318426323/widget.png?style=shield"></a>
 
