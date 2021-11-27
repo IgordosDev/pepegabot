@@ -1,0 +1,186 @@
+/* ПОМОГИТЕ МЕНЯ ДЕРЖАТ В ПОДВАЛЕ И ЗАСТАВЛЯЮТ ДЛЯ НИХ ДЕЛАТЬ САЙТЫ */
+/* ПОМОГИТЕ ПОЖАЛУЙСТА */
+/* @GogaNotClown */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200&family=Rubik:wght@300&family=Work+Sans:wght@200&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+h1, h2, h3, h4 {
+    line-height: 1.3;
+}
+
+a {
+    color: #444;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 2rem;
+}
+
+.section-showcase {
+    margin: 2rem 0;
+}
+
+.section-showcase .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-showcase h1 {
+    font-size: 4rem;
+    color: #333;
+}
+
+.section-showcase p {
+    margin: 1rem 0;
+}
+
+.section-large-text {
+    position: relative;
+    background: url("https://c.tenor.com/dZcvEzL_5aIAAAAC/clown-pepe.gif") bottom center / cover no-repeat;
+    height: 600px;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.section-large-text-inner {
+    color: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    max-width: 860px;
+    padding: 5rem 0;
+}
+
+.section-large-text-inner h2 {
+    font-size: 5rem;
+    margin-top: 1rem;
+}
+
+.section-large-text-inner h3 {
+    font-size: 2rem;
+}
+
+.section-large-text-inner p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.section-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 4rem 0;
+}
+
+.section-footer .container {
+    display: flex;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.section-footer h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.section-footer h3 {
+    margin-bottom: 0.7rem;
+}
+
+.section-footer a {
+    line-height: 1.9;
+    color: #ccc;
+}
+
+.section-footer a > i {
+    color: #555;
+    margin-right: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .section-showcase .container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .section-showcase .container div:first-child {
+        order: 2;
+    }
+
+    .section-showcase .container div:nth-child(2) {
+        order: -1;
+    }
+
+    .section-showcase h1 {
+        font-size: 2rem;
+    }
+
+    .section-showcase img {
+        width: 80%;
+        margin: auto;
+    }
+
+    .section-large-text-inner h2 {
+        font-size: 3rem;
+    }
+
+    .section-large-text-inner h3 {
+        font-size: 1.5rem;
+    }
+
+    .section-large-text-inner p {
+        font-size: 1.25rem;
+    }
+
+    .section-footer {
+        padding: 2rem 0;
+    }
+
+    .section-footer .container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .section-footer div:nth-child(2),
+    .section-footer div:nth-child(3) {
+        display: none;
+    }
+}
