@@ -1,4 +1,4 @@
-> # PepegaBot <img align="right" src="https://cdn.discordapp.com/avatars/819263848955379813/bde3aa31d9ede5937b348afb6c0c4923.png?size=512" alt="avatar" title="pepegabot" width="15%">
+> # PepegaBot <img align="right" src="https://user-images.githubusercontent.com/69392185/144762363-d7a840a8-ccb7-41b9-b6cb-d7aa5c2123b5.png" alt="avatar" title="pepegabot" width="15%">
 Бот, предназначенный для моего сервера друзей.
 
 Бот уже направлен для работы на Heroku.
