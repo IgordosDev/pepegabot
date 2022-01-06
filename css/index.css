@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@200&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 18px;
+    color: #313131;
+}
+
+/* Dope bigga */
+
+img {
+    width: 250px;
+    height: 250px;
+}
+
+header {
+    position: relative;
+    z-index: 2000;
+    background: #fff;
+    font-size: 20px;
+}
+
+header a {
+    color: #1a1e23;
+}
+
+a {
+    color: #f3f3f3;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+nav {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.bdc-gray {
+    border-color: #f3f3f3;
+}
+
+.pepe {
+    font-size: 2rem;
+}
+
+.bgc-white {
+    background-color: #fff;
+}
+
+@media (max-width: 580px) {
+    .logo {
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    header a {
+        font-size: 14px;
+    }
+}
+
+.landing-main {
+    min-height: calc(100vh - 158px);
+}
+
+/* Bigga dope */
