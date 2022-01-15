@@ -1,5 +1,6 @@
 module.exports = {
     name: "link",
+    aliases: ['clck'],
     code: `
     $getObjectProperty[link]
     $onlyIf[$getObjectProperty[link]!=$message[1];Сервис не захотел укорачивать эту ссылку]
