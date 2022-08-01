@@ -23,7 +23,6 @@ $setServerVar[webhook_token;$splitText[2]]
 $setServerVar[webhook_id;$splitText[1]]
   $textSplit[$createWebhook[$channelID;Sophia;https://cdn.discordapp.com/attachments/863356751897296896/904082889388486748/dCCuLYSjIhc.png;yes;/];/]
 $endif
-$suppressErrors[Произошла какая-то ошибка. $channelSendMessage[906868027398692904;{title:Дмитрий Нагиев вызывает} {author:$userTag ($authorID):$authorAvatar} {footer:$serverName ($guildID):$serverIcon} {description:{error}}]]
 $onlyIfMessageContains[$userPerms[$clientID];Manage Webhooks;Похоже у меня нет прав для управления вебхуками. Чат-бот не работает без этого разрешения.]
 $argsCheck[0;]
 `}]

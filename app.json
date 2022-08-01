@@ -9,7 +9,11 @@
   },
   "env": {
     "SNAPSHOT": {
-      "description": "Ключ к API снапшотов. Генерируется здесь: https://apiflash.com/ (необязателен, но команда \"snapshot\" работать без него не будет)",
+      "description": "Ключ к API снапшотов. Генерируется здесь: https://apiflash.com/ (необязателен, но команда \"snapshot\" работать не будет)",
+      "required": false
+    },
+    "last.fm": {
+      "description": "Ключ к API сервиса last.fm. Генерируется здесь: https://www.last.fm/api/account/create (необязателен, но команда \"lfm\" работать не будет)",
       "required": false
     },
     "TOKEN": {
