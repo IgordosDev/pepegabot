@@ -72,11 +72,7 @@ $onlyIfMessageContains[$noMentionMessage;ass;fuck;master;]
   name: "$alwaysExecute",
   code: `$addCmdReactions[😂]
   $onlyIfMessageContains[$toLowercase[$noMentionMessage];sus;]
-  `}, {
-    name: "$alwaysExecute",
-    code: `$addCmdReactions[🐸]
-    $onlyIfMessageContains[$noMentionMessage;pepe;]
-    `})
+  `})
 //предупреждение рейтлимитов
 bot.rateLimitCommand({ 
 channel: "906868027398692904",
